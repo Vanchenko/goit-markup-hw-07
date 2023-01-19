@@ -19,12 +19,8 @@
                 <a class="logo" href="./index.html">WEB<span class="logo-studio">STUDIO</span></a>
                 <!-- ++++++++++++++++++++++ Mobile Menu ++++++++++++++++++++++++++++++++++++++++-->
                 <button class="menu-toggle-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 
-                        0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd">
-                      </path>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" >
+                        <use href="./images/icons-form.svg#icon-burger"></use>    
                     </svg>
                 </button>
                 <div class="menu-container js-menu-container" id="mobile-menu">
@@ -36,11 +32,11 @@
                     <ul class="mobile-list-menu">
                         <li><a class="mobile-menu" href="./index.html">Studio</a></li>
                         <li><a class="mobile-menu" href="./portfolio.html">Portfolio</a></li>
-                        <li><a class="mobile-menu" href="./index.html">Contacts</a></li>
+                        <li><a class="mobile-menu accent" href="./index.html">Contacts</a></li>
                     </ul>
                     <ul class="mobile-list-contacts">
-                        <li><a class="contacts" href="tel:+11(111)1111111">+11 (111) 111-11-11</a></li>
-                        <li><a class="contacts" href=mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li><a class="mobile-contacts accent" href="tel:+11(111)1111111">+11 (111) 111-11-11</a></li>
+                        <li><a class="mobile-contacts" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                         <li>
                             <ul class="mobile-tsl-list">
                                 <li>
@@ -82,7 +78,7 @@
                 </ul>
             </nav>
             <ul class="list-contacts">
-                <li><a class="contacts" href=mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li><a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                 <li><a class="contacts" href="tel:+11(111)1111111">+11 (111) 111-11-11</a></li>
             </ul>
         </div>
@@ -193,13 +189,31 @@
                 <h2 class="work-title">What are we doing</h2>
                 <ul class="work-list">
                     <li class="work-item">
-                        <img width="360" height="300" src="./images/image1.jpg" alt="Desktop computer">
+                        <picture>
+                            <source media="(min-width:1200px)"
+                            srcset="./images/work/work1@1x.jpg 1x, 
+                                    ./images/work/work1@2x.jpg 2x"
+                            type="image/jpg" />
+                            <img width="360" height="300" src="./images/work/work1@1x.jpg" alt="Desktop computer">
+                        </picture>
                     </li>
                     <li class="work-item">
-                        <img width="360" height="300" src="./images/image2.jpg" alt="Mobile phone">
+                        <picture>
+                            <source media="(min-width:1200px)"
+                            srcset="./images/work/work2@1x.jpg 1x, 
+                                    ./images/work/work2@2x.jpg 2x"
+                            type="image/jpg" />
+                            <img width="360" height="300" src="./images/work/work2@1x.jpg" alt="Mobile phone">
+                        </picture>
                     </li>
                     <li class="work-item">
-                        <img width="360" height="300" src="./images/image3.jpg" alt="Notebook and mobile">
+                        <picture>
+                            <source media="(min-width:1200px)"
+                            srcset="./images/work/work3@1x.jpg 1x, 
+                                    ./images/work/work3@2x.jpg 2x"
+                            type="image/jpg" />
+                            <img width="360" height="300" src="./images/work/work3@1x.jpg" alt="Notebook and mobile">
+                        </picture>
                     </li>
                 </ul>
             </div>
