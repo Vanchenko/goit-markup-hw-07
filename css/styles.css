@@ -187,13 +187,14 @@ box-shadow: 0px 4px 4px 0px #00000040;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 40px 20px 20px 20px;
+    padding: 80px 20px 20px 20px;
     background-color: var(--modalbgc);
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
   .menu-container.is-open {
@@ -429,32 +430,37 @@ box-shadow: 0px 4px 4px 0px #00000040;
 }
 .modal {
     position: absolute;
-    /*top: 96px;
-    left: 18px;*/
-    transform: translate(18px,96px) scale(1);
-    width: 392px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
+    width: 320px;
     background: var(--modalbgc);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 16px 24px 16px;
+    padding: 72px 8px 24px 8px;
     
 } 
-/*.modal { top: 0; left: 0;  transform: translate(10px,96px);}*/
+@media screen and  (min-width: 425px ) {
+    .modal { width: 392px;
+              padding: 72px 16px 24px 16px; }
+    .modal-title { width: 360px;
+                    font-size: 16px; }
+}
 @media screen and (min-width: 768px)  {
     .modal {  width: 408px; 
-        top: 50%;
+        top: 10%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, 0%) scale(1);
         padding: 72px 24px 24px 24px; }
 }
 @media screen and (min-width: 1200px) {
     .modal {  width: 408px;
-        top: 50%;
+        top: 10%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, 0%) scale(1);
         padding: 72px 24px 24px 24px; }
 } 
 .modal-btn {
@@ -478,9 +484,9 @@ box-shadow: 0px 4px 4px 0px #00000040;
     fill: #ffffff;
 }
 .modal-title {
-    width: 360px;
+    width: 310px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
@@ -543,7 +549,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reg-form-comment {
-    width: 360px;
+    width: 100%;
     height: 120px;
     padding-top: 8px;
     padding-left: 16px;
@@ -1012,17 +1018,18 @@ box-shadow: 0px 4px 4px 0px #00000040;
     .footer .container { max-width: 565px; }
     .footer-list {
         display: flex;
-        flex-direction: row;
-        justify-content: left; }
+        flex-direction: row; }
+    .footer-logo-block { align-items: baseline;}
     .footer-social-media {
         margin-top: 0; 
-        margin-left: 24px; }
+        margin-left: 24px;
+        align-items: baseline;}
     .subscribe-group {
         flex-direction: row;
         gap: 24px;
         align-items: center; }
     .footer-title { text-align: left; }
-    .subscribe-input { width: 264px }
+    .subscribe-input { width: 264px; }
 }
 @media screen and (min-width: 1200px) {
     .footer { padding: 100px 0 100px 0; }
@@ -1041,7 +1048,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
 } 
 /*====================== страница Portfolio ========================*/
 @media screen and (min-width: 768px) {
-.port { flex-direction: column }
+.port { flex-direction: column; }
 }
 .portfolio {
     padding: 96px 0 120px 0;
